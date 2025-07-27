@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import WeatherDisplay from "./components/WeatherDisplay";
 import "./index.css";
 import { OPEN_WEATHER_API_KEY } from "./constants/api";
+import { Perf } from "r3f-perf";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             position: [0, 0, 32],
           }}
         >
+          <Perf position="top-left" />
           <WeatherDisplay />
         </Canvas>
       ) : (
